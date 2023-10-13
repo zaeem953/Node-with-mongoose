@@ -13,6 +13,7 @@ const uploads= multer({
         }
     })
 }).array("user_file")
+//.single("user_file")------------for single file upload
 
 app.post("/upload",uploads,(req,resp)=>{
     resp.send("Hello file")
